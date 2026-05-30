@@ -1,6 +1,6 @@
-# EcoVolt ⚡ | Ola & Tesla EV Awareness Website
+# EcoVolt ⚡ | Ola & Tesla EV Awareness Platform
 
-EcoVolt is a modern, responsive, startup-grade web platform designed to educate users about electric vehicles and provide personalized carbon offsets and expense trackers.
+EcoVolt is a human-centered, responsive, startup-grade web platform designed by **Anuj Gupta** to simplify the transition to sustainable electric driving. By providing transparent tools, cumulative cost calculators, and detailed fleet logs for next-gen scooters and cars, EcoVolt helps daily commuters understand their ecological impact and discover their perfect electric match.
 
 ### 🌐 Live Deployment
 The project is hosted live on Vercel:
@@ -63,3 +63,11 @@ Since this is a static project, you can run it directly:
    ```
 2. Double-click `index.html` to open the home page in your browser.
 3. Alternatively, host it on a local server (e.g. using VS Code's Live Server or Python `python -m http.server 8000`).
+
+---
+
+## 👤 Developed By & Credits
+This platform was envisioned, designed, and developed by **Anuj Gupta** as a contribution to the global clean mobility movement.
+
+- **Lead Developer**: Anuj Gupta ([GitHub Profile](https://github.com/AnujGupta45))
+- **Vision**: To simplify the transition to sustainable driving by providing clear tools, calculations, and fleet specs for next-gen mobility.
