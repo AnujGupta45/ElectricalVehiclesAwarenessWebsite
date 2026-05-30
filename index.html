@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoVolt | Drive the Future with Electric Mobility</title>
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="EcoVolt is a modern interactive EV platform. Track environmental carbon savings, compare Ola & Tesla vehicle models, and calculate driving costs.">
+  <meta name="keywords" content="Tesla, Ola Electric, Electric Vehicles, EV, EV Subsidies, Cost Calculator">
+  
+  <!-- CSS Frameworks -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      darkMode: 'class'
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="gradient-bg">
+
+  <!-- Floating Nav Header -->
+  <header id="main-header"></header>
+
+  <!-- Main Content Wrap -->
+  <main style="padding-top: 90px;">
+    
+    <!-- 1. Redesigned Hero Section (Startup theme) -->
+    <section class="position-relative overflow-hidden py-5 d-flex align-items-center" style="min-height: 90vh; background: linear-gradient(to bottom, rgba(4, 8, 16, 0.15), rgba(9, 13, 22, 0.2)), url('assets/images/hero-ev.png') no-repeat center center/cover;">
+      <div class="position-absolute top-0 start-0 w-100 h-100 hero-overlay" style="z-index: 1;"></div>
+      
+      <div class="container position-relative py-5" style="z-index: 2;">
+        <div class="row align-items-center py-5">
+          <div class="col-lg-7 text-white reveal active">
+            <span class="badge mb-3 px-3 py-2 text-uppercase fw-bold" style="background-color: var(--color-green); font-size: 0.75rem; letter-spacing: 2px; border-radius: 50px;">The Next-Gen Transit</span>
+            <h1 class="display-3 fw-extrabold mb-4" style="font-family: var(--font-heading); line-height: 1.05; letter-spacing: -1.5px;">
+              Drive the Future with <span style="background: linear-gradient(135deg, var(--color-green) 0%, var(--color-cyan) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Electric Vehicles</span>
+            </h1>
+            <p class="lead fs-5 mb-5 opacity-90" style="max-width: 600px; font-family: var(--font-body); font-weight: 400; line-height: 1.8;">
+              Compare cutting-edge fleets from Tesla and Ola. Experience instant torque, zero tailpipe emissions, and personalized cost calculators designed to track your carbon footprint offsets.
+            </p>
+            <div class="d-flex flex-wrap gap-3">
+              <a href="models.html" class="btn btn-glow-green px-5 py-3 fw-bold shadow-lg" style="border-radius: 100px;">
+                <i class="bi bi-car-front-fill me-2"></i> Explore Ola & Tesla
+              </a>
+              <a href="info.html" class="btn btn-glass border-white text-white px-5 py-3 fw-bold" style="border-radius: 100px;">
+                Interactive Guides <i class="bi-chevron-right ms-1"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Trust Indicators / Startup Partners -->
+    <section class="py-4 border-bottom" style="background-color: var(--bg-secondary); border-color: var(--border-color) !important; transition: var(--transition-smooth);">
+      <div class="container">
+        <div class="row align-items-center justify-content-center g-3 text-center">
+          <div class="col-6 col-md-3">
+            <span class="trust-logo text-muted"><i class="bi bi-lightning-fill text-success me-1"></i> OLA ELECTRIC</span>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="trust-logo text-muted"><i class="bi bi-shield-check text-primary me-1"></i> TESLA SYSTEM</span>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="trust-logo text-muted"><i class="bi bi-globe-americas text-info me-1"></i> GREEN GRID</span>
+          </div>
+          <div class="col-6 col-md-3">
+            <span class="trust-logo text-muted"><i class="bi bi-check-circle-fill text-success me-1"></i> CO2 OFFSET</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Staggered Benefits of EVs Section -->
+    <section class="py-5 my-5">
+      <div class="container">
+        <div class="text-center mb-5 py-3 reveal">
+          <span class="text-success fw-bold text-uppercase" style="font-size: 0.8rem; letter-spacing: 2px; color: var(--color-green) !important;">Why Electric?</span>
+          <h2 class="display-5 fw-extrabold mt-2 mb-3" style="font-family: var(--font-heading);">Designed for a Clean Planet</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px; font-family: var(--font-body);">Electric motors are cleaner, cheaper, and faster than internal combustion engines.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <!-- Benefit 1 -->
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card glass-card border-0 p-4 h-100 text-start">
+              <div class="d-flex align-items-center justify-content-center mb-4 rounded-4" style="width: 60px; height: 60px; background-color: var(--color-green-glow); color: var(--color-green);">
+                <i class="bi bi-tree-fill fs-3"></i>
+              </div>
+              <h4 class="fw-bold mb-3" style="font-family: var(--font-heading);">Zero Emissions</h4>
+              <p class="text-muted mb-0 small" style="line-height: 1.7;">Ditch tailpipe pollution. Every mile driven in an electric vehicle helps clean our shared urban atmosphere.</p>
+            </div>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card glass-card border-0 p-4 h-100 text-start" style="transform: translateY(10px);">
+              <div class="d-flex align-items-center justify-content-center mb-4 rounded-4" style="width: 60px; height: 60px; background-color: var(--color-blue-glow); color: var(--color-blue);">
+                <i class="bi bi-wallet-fill fs-3"></i>
+              </div>
+              <h4 class="fw-bold mb-3" style="font-family: var(--font-heading);">Cost Reductions</h4>
+              <p class="text-muted mb-0 small" style="line-height: 1.7;">Save on standard gasoline, engine maintenance, transmission filters, and routine oil replacements.</p>
+            </div>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card glass-card border-0 p-4 h-100 text-start">
+              <div class="d-flex align-items-center justify-content-center mb-4 rounded-4" style="width: 60px; height: 60px; background-color: var(--color-cyan-glow); color: var(--color-cyan);">
+                <i class="bi bi-lightning-charge-fill fs-3"></i>
+              </div>
+              <h4 class="fw-bold mb-3" style="font-family: var(--font-heading);">Hyper Performance</h4>
+              <p class="text-muted mb-0 small" style="line-height: 1.7;">Experience instantaneous motor torque and sports dynamics. Drive with low-gravity battery balancing.</p>
+            </div>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card glass-card border-0 p-4 h-100 text-start" style="transform: translateY(10px);">
+              <div class="d-flex align-items-center justify-content-center mb-4 rounded-4" style="width: 60px; height: 60px; background-color: rgba(13, 110, 253, 0.1); color: #0d6efd;">
+                <i class="bi bi-gear-wide-connected fs-3"></i>
+              </div>
+              <h4 class="fw-bold mb-3" style="font-family: var(--font-heading);">Simplified Tech</h4>
+              <p class="text-muted mb-0 small" style="line-height: 1.7;">Electric powertrains have a fraction of the moving components of gas engines. Less parts mean fewer breakages.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Interactive Statistics Counters Section -->
+    <section class="py-5 border-top border-bottom" style="background-color: var(--bg-secondary); border-color: var(--border-color) !important; transition: var(--transition-smooth);">
+      <div class="container py-4">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-md-3 reveal">
+            <h2 class="display-4 fw-extrabold mb-1" style="font-family: var(--font-heading); color: var(--color-green);">
+              <span class="counter" data-target="4.6" data-decimal="true">0</span>M+
+            </h2>
+            <p class="text-muted fw-bold mb-0" style="font-size: 0.85rem; text-transform: uppercase;">Tons of CO2 Saved/Yr</p>
+          </div>
+          <div class="col-6 col-md-3 reveal">
+            <h2 class="display-4 fw-extrabold mb-1" style="font-family: var(--font-heading); color: var(--color-blue);">
+              <span class="counter" data-target="26000000" data-decimal="false">0</span>
+            </h2>
+            <p class="text-muted fw-bold mb-0" style="font-size: 0.85rem; text-transform: uppercase;">EVs on Roads Globally</p>
+          </div>
+          <div class="col-6 col-md-3 reveal">
+            <h2 class="display-4 fw-extrabold mb-1" style="font-family: var(--font-heading); color: var(--color-cyan);">
+              <span class="counter" data-target="3" data-decimal="false">0</span>M+
+            </h2>
+            <p class="text-muted fw-bold mb-0" style="font-size: 0.85rem; text-transform: uppercase;">Public Chargers Active</p>
+          </div>
+          <div class="col-6 col-md-3 reveal">
+            <h2 class="display-4 fw-extrabold mb-1" style="font-family: var(--font-heading); color: var(--color-green);">
+              $<span class="counter" data-target="1250" data-decimal="false">0</span>
+            </h2>
+            <p class="text-muted fw-bold mb-0" style="font-size: 0.85rem; text-transform: uppercase;">Avg. Annual Gas Savings</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Featured EV Models Section -->
+    <section class="py-5 my-5">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center mb-5 reveal">
+          <div>
+            <span class="text-success fw-bold text-uppercase" style="font-size: 0.8rem; letter-spacing: 2px; color: var(--color-green) !important;">Ola & Tesla Highlights</span>
+            <h2 class="display-5 fw-extrabold mt-2" style="font-family: var(--font-heading); letter-spacing: -1px;">Featured Electric Fleet</h2>
+          </div>
+          <a href="models.html" class="btn btn-glow-green px-5 py-3 fw-bold mt-3 mt-md-0" style="border-radius: 100px;">
+            Open Vehicle Catalog <i class="bi bi-chevron-right ms-1"></i>
+          </a>
+        </div>
+
+        <div class="row g-4" id="models-grid">
+          <!-- Dynamically loaded models via script -->
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Startup Guide CTA -->
+    <section class="py-5 mb-5 reveal">
+      <div class="container">
+        <div class="glass-card p-5 border-0 text-center position-relative overflow-hidden" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(6, 182, 212, 0.08) 100%); border-radius: 2rem;">
+          <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at top right, var(--color-cyan-glow) 0%, transparent 60%); z-index: -1;"></div>
+          
+          <h3 class="display-6 fw-extrabold mb-3" style="font-family: var(--font-heading); letter-spacing: -1px;">Find Your Electric Matching Profile</h3>
+          <p class="text-muted mx-auto mb-4" style="max-width: 650px; font-size: 1.05rem; font-family: var(--font-body);">
+            Take our 3-step decision wizard quiz to align your budget, average weekly distance, and parking grid setup to match with the ideal battery scooter or sedan!
+          </p>
+          <a href="resources.html#buying-guide" class="btn btn-glow-green px-5 py-3.5 fw-bold shadow-sm" style="border-radius: 100px;">
+            Match Drivetrain Profile
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Shared Footer -->
+  <footer id="main-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/models.js"></script>
+  <script>
+    // Show top 3 models on the Home Page
+    window.addEventListener('load', () => {
+      // Delaying featured render slightly to allow models array load
+      setTimeout(() => {
+        const featured = EV_DATABASE.slice(0, 3);
+        renderModels(featured);
+      }, 50);
+    });
+  </script>
+</body>
+</html>

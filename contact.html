@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoVolt | Contact Support & Location Map</title>
+  <meta name="description" content="Reach out to the EcoVolt clean energy support team. View our San Francisco office on the interactive map.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      darkMode: 'class'
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="gradient-bg">
+
+  <!-- Floating Nav Header -->
+  <header id="main-header"></header>
+
+  <!-- Main Content -->
+  <main style="padding-top: 90px;">
+    
+    <!-- Hero Banner -->
+    <section class="py-5" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);">
+      <div class="container py-4 text-center reveal active">
+        <h1 class="display-4 fw-extrabold mb-3" style="font-family: var(--font-heading); letter-spacing: -1px;">Contact Support Center</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 700px; font-family: var(--font-body); font-size: 1.05rem;">
+          Connect with clean transit experts. Review our physical office location map or submit an online query below.
+        </p>
+      </div>
+    </section>
+
+    <!-- Forms & Info Section -->
+    <section class="py-5">
+      <div class="container py-3">
+        <div class="row g-5">
+          
+          <!-- 1. Contact Info Column -->
+          <div class="col-lg-5 reveal">
+            <span class="text-success fw-bold text-uppercase" style="font-size: 0.8rem; letter-spacing: 2px; color: var(--color-green) !important;">Office Details</span>
+            <h2 class="display-6 fw-extrabold mt-2 mb-4" style="font-family: var(--font-heading); letter-spacing: -0.5px;">EcoVolt Headquarters</h2>
+            <p class="text-muted mb-4 small" style="line-height: 1.7;">Visit our engineering center or reach out via phone/email support. We reply to digital queries within 24 hours.</p>
+            
+            <div class="d-flex flex-column gap-3.5 mb-5">
+              <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center justify-content-center rounded-4 bg-success bg-opacity-10 text-success" style="width: 50px; height: 50px;">
+                  <i class="bi bi-envelope-fill fs-5"></i>
+                </div>
+                <div>
+                  <span class="text-muted small d-block">Official Email</span>
+                  <a href="mailto:support@ecovolt.org" class="fw-bold text-decoration-none text-dark" style="color: var(--text-primary) !important;">support@ecovolt.org</a>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center justify-content-center rounded-4 bg-primary bg-opacity-10 text-primary" style="width: 50px; height: 50px;">
+                  <i class="bi bi-telephone-fill fs-5"></i>
+                </div>
+                <div>
+                  <span class="text-muted small d-block">Hotline Support</span>
+                  <a href="tel:+18005550199" class="fw-bold text-decoration-none text-dark" style="color: var(--text-primary) !important;">+1 (800) 555-0199</a>
+                </div>
+              </div>
+              <div class="d-flex align-items-center gap-3">
+                <div class="d-flex align-items-center justify-content-center rounded-4 bg-warning bg-opacity-10 text-warning" style="width: 50px; height: 50px;">
+                  <i class="bi bi-geo-alt-fill fs-5"></i>
+                </div>
+                <div>
+                  <span class="text-muted small d-block">Physical Address</span>
+                  <span class="fw-bold">100 Green Tech Blvd, San Francisco, CA</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Embedded Interactive Map Card (OpenStreetMap) -->
+            <div class="card glass-card border-0 p-2 overflow-hidden shadow-sm mb-4" style="border-radius: 1.25rem;">
+              <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=-122.42,37.77,-122.39,37.79&layer=mapnik&marker=37.78,-122.41" width="100%" height="240" style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+
+            <!-- Social Links -->
+            <h5 class="fw-bold mb-3" style="font-family: var(--font-heading); font-size: 1rem; text-transform: uppercase; letter-spacing: 0.5px;">Follow Us</h5>
+            <div class="d-flex gap-3">
+              <a href="#" class="btn btn-glass p-2.5 d-flex align-items-center justify-content-center shadow-sm" style="width: 42px; height: 42px; border-radius: 50%;" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="btn btn-glass p-2.5 d-flex align-items-center justify-content-center shadow-sm" style="width: 42px; height: 42px; border-radius: 50%;" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <a href="#" class="btn btn-glass p-2.5 d-flex align-items-center justify-content-center shadow-sm" style="width: 42px; height: 42px; border-radius: 50%;" aria-label="Youtube"><i class="bi bi-youtube"></i></a>
+              <a href="#" class="btn btn-glass p-2.5 d-flex align-items-center justify-content-center shadow-sm" style="width: 42px; height: 42px; border-radius: 50%;" aria-label="GitHub"><i class="bi bi-github"></i></a>
+            </div>
+          </div>
+
+          <!-- 2. Interactive Contact Form Column -->
+          <div class="col-lg-7 reveal">
+            <div class="card glass-card border-0 p-4 p-md-5">
+              <h3 class="fw-extrabold mb-4" style="font-family: var(--font-heading); letter-spacing: -0.5px;">Send Support Message</h3>
+              
+              <form id="contact-form" onsubmit="handleContactSubmit(event)">
+                <div class="row g-2">
+                  <!-- Name Floating -->
+                  <div class="col-md-6">
+                    <div class="form-floating-custom">
+                      <input type="text" id="contact-name" placeholder=" " required>
+                      <label>Your Name</label>
+                    </div>
+                  </div>
+
+                  <!-- Email Floating -->
+                  <div class="col-md-6">
+                    <div class="form-floating-custom">
+                      <input type="email" id="contact-email" placeholder=" " required>
+                      <label>Email Address</label>
+                    </div>
+                  </div>
+
+                  <!-- Subject Floating -->
+                  <div class="col-12">
+                    <div class="form-floating-custom">
+                      <input type="text" id="contact-subject" placeholder=" " required>
+                      <label>Subject Topic</label>
+                    </div>
+                  </div>
+
+                  <!-- Message Floating -->
+                  <div class="col-12">
+                    <div class="form-floating-custom">
+                      <textarea id="contact-message" rows="5" placeholder=" " required style="height: 140px; padding-top: 1.5rem; resize: none;"></textarea>
+                      <label>Message Content</label>
+                    </div>
+                  </div>
+                </div>
+
+                <button class="btn btn-glow-green w-100 py-3 fw-bold mt-4 shadow-sm" type="submit" style="border-radius: 0.85rem;">
+                  Send Message <i class="bi bi-send ms-1 fs-5"></i>
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    function handleContactSubmit(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('contact-name').value.trim();
+      const email = document.getElementById('contact-email').value.trim();
+      const subject = document.getElementById('contact-subject').value.trim();
+      const message = document.getElementById('contact-message').value.trim();
+
+      if (!name || !email || !subject || !message) {
+        alert("All fields are required to submit support tickets.");
+        return;
+      }
+
+      if (message.length < 15) {
+        alert("Please write a slightly more detailed message (minimum 15 characters).");
+        return;
+      }
+
+      alert(`Thank you, ${name}! Your inquiry concerning "${subject}" was successfully submitted. We will email replies to ${email} within 24 hours.`);
+      document.getElementById('contact-form').reset();
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoVolt | Access Profile</title>
+  <meta name="description" content="Sign in to your EcoVolt dashboard. Review favorites list, saved vehicles, and carbon impact projections.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      darkMode: 'class'
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="gradient-bg d-flex flex-column" style="min-height: 100vh;">
+
+  <!-- Header -->
+  <header id="main-header"></header>
+
+  <!-- Login Form Wrapper -->
+  <main class="flex-grow-1 d-flex align-items-center py-5" style="padding-top: 100px !important;">
+    <div class="container text-start">
+      <div class="row justify-content-center">
+        <div class="col-lg-10 reveal active">
+          
+          <!-- Split Outer Card -->
+          <div class="card glass-card border-0 overflow-hidden shadow-lg" style="border-radius: 2rem;">
+            <div class="row g-0" style="min-height: 520px;">
+              
+              <!-- Left Pane: Brand Panel -->
+              <div class="col-md-6 d-none d-md-flex flex-column justify-content-between p-5 text-white position-relative" style="background: linear-gradient(135deg, #090d16 0%, #0b1120 100%);">
+                <div class="position-absolute top-0 start-0 w-100 h-100" style="background: radial-gradient(circle at top right, var(--color-green-glow) 0%, transparent 60%); opacity: 0.6; z-index: 1;"></div>
+                
+                <div class="position-relative" style="z-index: 2;">
+                  <a class="navbar-brand d-flex align-items-center fw-bold fs-3 text-glow-green" href="index.html" style="font-family: var(--font-heading); color: var(--color-green);">
+                    <i class="bi bi-lightning-charge-fill me-2 rotate-slow" style="color: var(--color-cyan);"></i>
+                    <span>EcoVolt</span>
+                  </a>
+                </div>
+                
+                <div class="position-relative my-auto" style="z-index: 2;">
+                  <h3 class="display-6 fw-extrabold mb-3" style="font-family: var(--font-heading); letter-spacing: -1px;">Access Your EV Dashboard</h3>
+                  <p class="opacity-75 small" style="line-height: 1.7; font-family: var(--font-body);">
+                    Sign in to track custom tailpipe emissions offsets, manage saved Ola/Tesla vehicles, and inspect cumulative financial calculations.
+                  </p>
+                </div>
+                
+                <div class="position-relative" style="z-index: 2; font-size: 0.85rem; color: var(--text-muted);">
+                  &copy; 2026 EcoVolt. Empowering Clean Mobility.
+                </div>
+              </div>
+
+              <!-- Right Pane: Login inputs -->
+              <div class="col-md-6 p-4 p-md-5 d-flex flex-column justify-content-center" style="background-color: var(--bg-secondary); transition: var(--transition-smooth);">
+                <div class="mb-4">
+                  <h2 class="fw-bold mb-1" style="font-family: var(--font-heading); letter-spacing: -0.5px;">Welcome Back</h2>
+                  <p class="text-muted small">Enter credentials to unlock your profile data.</p>
+                </div>
+
+                <!-- Error Alert Box -->
+                <div class="alert alert-danger d-none py-2.5 px-3 small mb-4" id="login-error-alert" role="alert" style="border-radius: 0.75rem;"></div>
+
+                <form id="login-form">
+                  <!-- Email Floating -->
+                  <div class="form-floating-custom">
+                    <input type="email" id="login-email" placeholder=" " required>
+                    <label>Email Address</label>
+                  </div>
+
+                  <!-- Password Floating -->
+                  <div class="form-floating-custom">
+                    <div class="input-group" style="border-radius: 0.85rem; overflow: hidden; border: 1px solid var(--border-color); background: var(--bg-primary);">
+                      <input type="password" id="login-password" class="border-0 bg-transparent py-2.5 px-3" placeholder=" " required style="font-size: 0.95rem; flex-grow: 1; outline: none; padding-top: 1.25rem; padding-bottom: 0.5rem; color: var(--text-primary);">
+                      <button class="btn border-0 password-toggle shadow-none bg-transparent" type="button" data-target="login-password" style="color: var(--text-muted);">
+                        <i class="bi bi-eye"></i>
+                      </button>
+                    </div>
+                    <label style="top: 0.75rem; font-size: 0.75rem; font-weight: 700; color: var(--color-green); text-transform: uppercase; letter-spacing: 0.5px;">Password</label>
+                  </div>
+
+                  <div class="d-flex justify-content-end mb-4">
+                    <a href="#" class="text-decoration-none small text-success fw-semibold">Forgot Password?</a>
+                  </div>
+
+                  <!-- Submit -->
+                  <button type="submit" class="btn btn-glow-green w-100 py-3 fw-bold shadow-sm mb-3">
+                    Sign In
+                  </button>
+
+                  <p class="text-center text-muted small mb-0">
+                    Don't have an account? 
+                    <a href="signup.html" class="text-success fw-bold text-decoration-none">Sign Up Free</a>
+                  </p>
+                </form>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/auth.js"></script>
+</body>
+</html>

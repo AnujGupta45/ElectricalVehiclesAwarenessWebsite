@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoVolt | Ola & Tesla EV Directory</title>
+  <meta name="description" content="Browse popular electric vehicle models from Tesla and Ola. Compare prices, ranges, batteries, charging times, and technical specifications.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      darkMode: 'class'
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="gradient-bg">
+
+  <!-- Floating Nav Header -->
+  <header id="main-header"></header>
+
+  <!-- Main Content -->
+  <main style="padding-top: 90px;">
+    
+    <!-- Hero Banner -->
+    <section class="py-5" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);">
+      <div class="container py-4 text-center reveal active">
+        <h1 class="display-4 fw-extrabold mb-3" style="font-family: var(--font-heading); letter-spacing: -1px;">Ola & Tesla Vehicle Catalog</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 700px; font-family: var(--font-body); font-size: 1.05rem;">
+          Discover electric scooters, sports bikes, luxury sedans, and stainless steel utility trucks. Compare prices and charge rates instantly.
+        </p>
+      </div>
+    </section>
+
+    <!-- Search & Catalog Grid Section -->
+    <section class="py-5">
+      <div class="container">
+        
+        <!-- Search & Sort Top-bar -->
+        <div class="row g-3 mb-5 align-items-center justify-content-between reveal active">
+          <div class="col-md-6 col-lg-5">
+            <div class="input-group shadow-sm" style="border-radius: 0.85rem; overflow: hidden; background: var(--bg-secondary);">
+              <span class="input-group-text bg-transparent border-end-0 border-0" style="color: var(--text-muted);"><i class="bi bi-search"></i></span>
+              <input type="text" id="search-ev" class="form-control border-start-0 border-0 py-2.5 ps-0" placeholder="Search Ola, Tesla, Cybertruck..." style="font-size: 0.95rem; font-family: var(--font-body);">
+            </div>
+          </div>
+          <div class="col-md-4 col-lg-3">
+            <div class="d-flex align-items-center gap-2">
+              <label class="small fw-bold text-nowrap mb-0 text-muted">Sort By:</label>
+              <select id="filter-sort" class="form-select shadow-sm calc-input" style="font-size: 0.9rem; border-radius: 0.85rem;">
+                <option value="default" selected>Popularity</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="range-desc">Maximum Range</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4">
+          
+          <!-- 1. Filters Sidebar -->
+          <div class="col-lg-3 reveal active">
+            <div class="card glass-card border-0 p-4 sticky-top" style="top: 110px; z-index: 99; border-radius: 1.5rem;">
+              <h4 class="fw-bold mb-4" style="font-family: var(--font-heading); font-size: 1.15rem;"><i class="bi bi-funnel me-2"></i> Catalog Filters</h4>
+              
+              <!-- Brand Dropdown -->
+              <div class="mb-3">
+                <label class="form-label small fw-bold text-muted" style="text-transform: uppercase; letter-spacing: 0.5px;">Brand</label>
+                <select id="filter-brand" class="form-select calc-input">
+                  <option value="all">All Brands</option>
+                  <!-- Populated by script -->
+                </select>
+              </div>
+
+              <!-- Body Type Dropdown -->
+              <div class="mb-4">
+                <label class="form-label small fw-bold text-muted" style="text-transform: uppercase; letter-spacing: 0.5px;">Powertrain Category</label>
+                <select id="filter-type" class="form-select calc-input">
+                  <option value="all">All Categories</option>
+                  <!-- Populated by script -->
+                </select>
+              </div>
+
+              <!-- Price Slider -->
+              <div class="mb-4">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <label class="form-label small fw-bold text-muted mb-0" style="text-transform: uppercase; letter-spacing: 0.5px;">Max Budget</label>
+                  <span class="small fw-extrabold text-success" id="price-value">$250,000</span>
+                </div>
+                <input type="range" id="filter-price" class="form-range" min="1500" max="200000" step="5000" value="200000">
+                <div class="d-flex justify-content-between small text-muted">
+                  <span>$1.5k</span>
+                  <span>$200k</span>
+                </div>
+              </div>
+
+              <!-- Range Slider -->
+              <div class="mb-3">
+                <div class="d-flex justify-content-between align-items-center mb-1">
+                  <label class="form-label small fw-bold text-muted mb-0" style="text-transform: uppercase; letter-spacing: 0.5px;">Min Range</label>
+                  <span class="small fw-extrabold text-primary" id="range-value">100 miles</span>
+                </div>
+                <input type="range" id="filter-range" class="form-range" min="100" max="600" step="25" value="100">
+                <div class="d-flex justify-content-between small text-muted">
+                  <span>100 mi</span>
+                  <span>600 mi</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2. Vehicles Grid -->
+          <div class="col-lg-9">
+            <div class="row g-4" id="models-grid">
+              <!-- Dynamically populated cards via models.js -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/models.js"></script>
+</body>
+</html>

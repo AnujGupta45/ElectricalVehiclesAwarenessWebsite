@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoVolt | Government Subsidies & EV Policies</title>
+  <meta name="description" content="Review federal clean vehicle tax credits, home charging hardware rebates, and state-specific EV exemptions.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      darkMode: 'class'
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="gradient-bg">
+
+  <!-- Floating Nav Header -->
+  <header id="main-header"></header>
+
+  <!-- Main Content -->
+  <main style="padding-top: 90px;">
+    
+    <!-- Hero Banner -->
+    <section class="py-5" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);">
+      <div class="container py-4 text-center reveal active">
+        <h1 class="display-4 fw-extrabold mb-3" style="font-family: var(--font-heading); letter-spacing: -1px;">Incentives & Regulatory Policies</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 700px; font-family: var(--font-body); font-size: 1.05rem;">
+          Navigating tax credits, registration exemptions, and commuter lane decals. Learn how regional incentives stack to reduce vehicle prices.
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. Subsidy Breakdown Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row align-items-center g-5">
+          <div class="col-lg-6 reveal">
+            <span class="text-success fw-bold text-uppercase" style="font-size: 0.8rem; letter-spacing: 2px; color: var(--color-green) !important;">Financial Incentives</span>
+            <h2 class="display-6 fw-extrabold mt-2 mb-4" style="font-family: var(--font-heading); letter-spacing: -0.5px;">Clean Vehicle Tax Credits</h2>
+            <p class="text-muted mb-4">
+              Legislations like the Inflation Reduction Act allow new EV buyers to apply up to **$7,500** in tax credits directly at point-of-sale dealership checkouts. Used EV credits provide up to **$4,000** for pre-owned electric cars.
+            </p>
+            
+            <div class="d-flex flex-column gap-3.5">
+              <div class="d-flex gap-3 align-items-start">
+                <div class="rounded bg-success bg-opacity-10 text-success p-2">
+                  <i class="bi bi-tag-fill fs-5"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1" style="font-family: var(--font-heading); font-size: 1.1rem;">Dealership Discount</h5>
+                  <p class="text-muted small">Apply tax credits directly as a down-payment rebate when buying, rather than waiting for annual tax filings.</p>
+                </div>
+              </div>
+              <div class="d-flex gap-3 align-items-start">
+                <div class="rounded bg-primary bg-opacity-10 text-primary p-2">
+                  <i class="bi bi-clock-history fs-5"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1" style="font-family: var(--font-heading); font-size: 1.1rem;">Used Vehicle Rebates</h5>
+                  <p class="text-muted small">Receive 30% off (capped at $4,000) for pre-owned electric models priced under $25,000.</p>
+                </div>
+              </div>
+              <div class="d-flex gap-3 align-items-start">
+                <div class="rounded bg-info bg-opacity-10 text-info p-2">
+                  <i class="bi bi-lightning-charge-fill fs-5"></i>
+                </div>
+                <div>
+                  <h5 class="fw-bold mb-1" style="font-family: var(--font-heading); font-size: 1.1rem;">Wall Charger Credits</h5>
+                  <p class="text-muted small">Get up to a 30% federal credit (up to $1,000) on installation labor and Level 2 smart hardware.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6 reveal">
+            <div class="card glass-card border-0 p-4 p-md-5">
+              <h4 class="fw-bold mb-3" style="font-family: var(--font-heading); font-size: 1.25rem;">Credit Compliance Guidelines</h4>
+              <p class="text-muted small mb-4">To qualify for federal tax credits, vehicles and buyers must satisfy these conditions:</p>
+              
+              <ul class="list-unstyled d-flex flex-column gap-3 small text-muted">
+                <li class="border-bottom pb-2.5" style="border-color: var(--border-color) !important;">
+                  <strong class="text-primary d-block">MSRP Capping</strong>
+                  Electric SUVs, Trucks, and Vans must be under $80,000. Sedans and Hatchbacks must be under $55,000.
+                </li>
+                <li class="border-bottom pb-2.5" style="border-color: var(--border-color) !important;">
+                  <strong class="text-primary d-block">Adjusted Gross Income Limit</strong>
+                  Single filers must earn under $150,000; Married Joint filers must earn under $300,000.
+                </li>
+                <li class="border-bottom pb-2.5" style="border-color: var(--border-color) !important;">
+                  <strong class="text-primary d-block">Battery Sourcing Check</strong>
+                  Min. percentage of battery core minerals must be processed or sourced in the US or partner countries.
+                </li>
+                <li>
+                  <strong class="text-primary d-block">Assembly Origin</strong>
+                  Final mechanical assembly must take place within North American borders.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. State Policies Dropdown Section -->
+    <section class="py-5" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); transition: var(--transition-smooth);">
+      <div class="container py-3">
+        <div class="row align-items-center g-5">
+          
+          <div class="col-lg-5 reveal">
+            <span class="text-success fw-bold text-uppercase" style="font-size: 0.8rem; letter-spacing: 2px; color: var(--color-green) !important;">Regional Databases</span>
+            <h2 class="display-6 fw-extrabold mt-2 mb-4" style="font-family: var(--font-heading); letter-spacing: -0.5px;">State-by-State Incentives</h2>
+            <p class="text-muted mb-4">
+              Individual states offer additional cash rebates, registration exemptions, and commuter perks that stack directly on top of federal credits.
+            </p>
+            
+            <div class="form-floating-custom">
+              <select id="state-policy-selector" class="form-select" onchange="loadStateIncentives()" required>
+                <option value="CA" selected>California (CA)</option>
+                <option value="NY">New York (NY)</option>
+                <option value="TX">Texas (TX)</option>
+                <option value="WA">Washington (WA)</option>
+                <option value="FL">Florida (FL)</option>
+              </select>
+              <label>Select State Database</label>
+            </div>
+          </div>
+
+          <div class="col-lg-7 reveal">
+            <div class="card glass-card border-0 p-4 p-md-5" id="state-incentive-card" style="min-height: 250px;">
+              <!-- Dynamic state info -->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Redesigned Downloadable Resource Cards -->
+    <section class="py-5 my-5">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="text-success fw-bold text-uppercase" style="font-size: 0.8rem; letter-spacing: 2px; color: var(--color-green) !important;">Information Center</span>
+          <h2 class="display-6 fw-extrabold mt-2" style="font-family: var(--font-heading); letter-spacing: -0.5px;">Official Guides & Matrixes</h2>
+          <p class="text-muted">Download compiled compliance matrixes and blueprints directly onto your device.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- Guide 1 -->
+          <div class="col-md-4 reveal">
+            <div class="card glass-card border-0 p-4 h-100 text-start d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-center bg-danger bg-opacity-10 text-danger rounded-4 mb-4" style="width: 50px; height: 50px;">
+                  <i class="bi bi-file-earmark-pdf-fill fs-3"></i>
+                </div>
+                <h4 class="fw-bold mb-2" style="font-family: var(--font-heading); font-size: 1.25rem;">Federal Tax filing Guide</h4>
+                <p class="text-muted small">Tax prep sheet detailing IRS Form 8936 procedures and point-of-sale dealer registrations.</p>
+              </div>
+              <button onclick="downloadMockPDF('EV_Federal_Tax_Incentive_Guide', 'IRS Form 8936 steps, vehicle criteria rules.')" class="btn btn-glass w-100 py-2.5 mt-4" style="border-radius: 0.75rem;">
+                <i class="bi bi-download me-2"></i> Download PDF
+              </button>
+            </div>
+          </div>
+
+          <!-- Guide 2 -->
+          <div class="col-md-4 reveal">
+            <div class="card glass-card border-0 p-4 h-100 text-start d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-center bg-danger bg-opacity-10 text-danger rounded-4 mb-4" style="width: 50px; height: 50px;">
+                  <i class="bi bi-file-earmark-pdf-fill fs-3"></i>
+                </div>
+                <h4 class="fw-bold mb-2" style="font-family: var(--font-heading); font-size: 1.25rem;">State Incentive Checklist</h4>
+                <p class="text-muted small">Checklist comparing HOV lane access rules, toll discounts, and sales tax rebates for 50 states.</p>
+              </div>
+              <button onclick="downloadMockPDF('State_EV_Policies_Matrix', 'Full checklists of rebates, HOV lane stickers.')" class="btn btn-glass w-100 py-2.5 mt-4" style="border-radius: 0.75rem;">
+                <i class="bi bi-download me-2"></i> Download PDF
+              </button>
+            </div>
+          </div>
+
+          <!-- Guide 3 -->
+          <div class="col-md-4 reveal">
+            <div class="card glass-card border-0 p-4 h-100 text-start d-flex flex-column justify-content-between">
+              <div>
+                <div class="d-flex align-items-center justify-content-center bg-danger bg-opacity-10 text-danger rounded-4 mb-4" style="width: 50px; height: 50px;">
+                  <i class="bi bi-file-earmark-pdf-fill fs-3"></i>
+                </div>
+                <h4 class="fw-bold mb-2" style="font-family: var(--font-heading); font-size: 1.25rem;">Electric Charger Install Blueprint</h4>
+                <p class="text-muted small">Electrician wiring guidelines for Level 2 garage sockets, load rules, and utility meters.</p>
+              </div>
+              <button onclick="downloadMockPDF('Home_L2_Charging_Installation_Guide', 'Wiring charts, electrical load balances.')" class="btn btn-glass w-100 py-2.5 mt-4" style="border-radius: 0.75rem;">
+                <i class="bi bi-download me-2"></i> Download PDF
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+    const STATE_DATABASE = {
+      CA: {
+        name: "California",
+        rebates: "Clean Vehicle Rebate Project (CVRP) offers up to $7,500 based on household income. In addition, Clean Cars 4 All offers scrap-and-replace grants of up to $9,500.",
+        hov: "Clean Air Vehicle (CAV) orange decals grant single-occupant access to HOV (carpool) and express lanes state-wide.",
+        charger: "Various local utility grants (e.g. PG&E) provide up to $800 rebate for home charger purchases.",
+        utility: "Time-of-Use (TOU) overnight charging electric rates under 15 cents/kWh (over 50% discount compared to daytime peak)."
+      },
+      NY: {
+        name: "New York",
+        rebates: "Drive Clean Rebate provides up to $2,000 point-of-sale rebate on the purchase or lease of a new plug-in car.",
+        hov: "Clean Pass program allows registered EVs to use the Long Island Expressway HOV lanes regardless of passenger count.",
+        charger: "PSEG and ConEd provide up to $500 rebate for installing WiFi-enabled smart Level 2 residential charging stations.",
+        utility: "ConEd SmartCharge NY program rewards drivers with 10 cents/kWh cash back for charging during off-peak hours (midnight to 8 AM)."
+      },
+      TX: {
+        name: "Texas",
+        rebates: "Texas Emissions Reduction Plan (TERP) periodically offers rebates of up to $2,500 for buying qualifying light-duty EVs.",
+        hov: "No statewide HOV exemption, but local tollways (e.g., Houston METRO) offer discounted toll fees for hybrid and electric vehicles.",
+        charger: "Oncor and Austin Energy offer home electric infrastructure installation incentives covering 50% of charger cost up to $250.",
+        utility: "Several retail electric providers (REPs) offer custom 'Free EV Charging Nights' plans between 11 PM and 6 AM."
+      },
+      WA: {
+        name: "Washington",
+        rebates: "Complete exemption from the state retail sales and use tax on new EV purchases priced under $45,000 (saves up to $3,200).",
+        hov: "Single-occupant EV drivers are permitted to use HOV express lanes on State Route 520 and Interstate 405.",
+        charger: "Sales tax exemption on charger hardware purchases and installation contractor labor fees.",
+        utility: "Seattle City Light and Tacoma Power offer residential off-peak credits of $100 per year for reporting EV charging sessions."
+      },
+      FL: {
+        name: "Florida",
+        rebates: "No state purchase rebates, but EVs are completely exempt from local county emissions inspection requirements.",
+        hov: "High Occupancy Vehicle (HOV) lane decals permit single-occupant EVs to use carpool lanes on all Florida expressways and tollways.",
+        charger: "Orlando Utilities Commission (OUC) and FPL offer $200 rebates for residential Level 2 smart charger installations.",
+        utility: "FPL EVolution Home Charging program installs a Level 2 charger and provides unlimited off-peak weekend/night charging for a fixed $31/month."
+      }
+    };
+
+    function loadStateIncentives() {
+      const stateCode = document.getElementById('state-policy-selector').value;
+      const state = STATE_DATABASE[stateCode];
+      const card = document.getElementById('state-incentive-card');
+      
+      if (!state || !card) return;
+
+      card.innerHTML = `
+        <div class="d-flex justify-content-between align-items-center border-bottom pb-3 mb-4" style="border-color: var(--border-color) !important;">
+          <h4 class="fw-bold mb-0 text-success" style="font-family: var(--font-heading); font-size: 1.25rem;">${state.name} State Incentives</h4>
+          <span class="incentive-tag">${stateCode} Perks</span>
+        </div>
+        
+        <div class="d-flex flex-column gap-3.5" style="font-size: 0.95rem;">
+          <div>
+            <strong class="text-primary d-block mb-1.5"><i class="bi bi-cash-coin me-2"></i> Rebates & Purchase Grants</strong>
+            <p class="text-muted mb-0 small" style="line-height: 1.6;">${state.rebates}</p>
+          </div>
+          <div>
+            <strong class="text-primary d-block mb-1.5"><i class="bi bi-car-front-fill me-2"></i> Highway HOV Lane stickers</strong>
+            <p class="text-muted mb-0 small" style="line-height: 1.6;">${state.hov}</p>
+          </div>
+          <div>
+            <strong class="text-primary d-block mb-1.5"><i class="bi bi-lightning-charge-fill me-2"></i> Charger Installation Credits</strong>
+            <p class="text-muted mb-0 small" style="line-height: 1.6;">${state.charger}</p>
+          </div>
+          <div>
+            <strong class="text-primary d-block mb-1.5"><i class="bi bi-clock me-2"></i> Electric Utility off-peak discounts</strong>
+            <p class="text-muted mb-0 small" style="line-height: 1.6;">${state.utility}</p>
+          </div>
+        </div>
+      `;
+    }
+
+    // Dynamic Blob PDF Downloader
+    function downloadMockPDF(filename, summaryText) {
+      const title = filename.replace(/_/g, ' ');
+      const content = `
+=========================================
+      ECOVOLT RESOURCE CENTER
+      GUIDE: ${title.toUpperCase()}
+=========================================
+Date: May 30, 2026
+Document Type: Official Reference PDF
+Status: Fully Verified
+
+OVERVIEW:
+This reference sheet is dynamically compiled by EcoVolt to help 
+you understand electric vehicle guidelines and savings processes.
+
+DOCUMENT SUMMARY:
+${summaryText}
+
+KEY STEPS:
+1. Review eligibility criteria (MSRP, tax filing status).
+2. Gather manufacturer certificates.
+3. Submit Form 8936 (or state forms) during purchase check-out.
+4. Set up overnight residential charging routines.
+
+For support, visit: https://ecovolt.org/support
+-----------------------------------------
+Thank you for driving towards a cleaner future!
+EcoVolt Inc. (c) 2026
+`;
+
+      const blob = new Blob([content], { type: 'text/plain;charset=utf-8' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = `${filename}.pdf`;
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+
+    window.addEventListener('load', loadStateIncentives);
+  </script>
+</body>
+</html>

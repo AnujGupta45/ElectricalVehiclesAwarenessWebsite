@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EcoVolt | EV Powertrains & Live Savings Calculator</title>
+  <meta name="description" content="Learn about EV categories (BEV, PHEV, HEV, FCEV), drivetrain operations, and calculate fuel savings using real-time drag sliders.">
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      corePlugins: { preflight: false },
+      darkMode: 'class'
+    }
+  </script>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="gradient-bg">
+
+  <!-- Floating Nav Header -->
+  <header id="main-header"></header>
+
+  <!-- Main Content -->
+  <main style="padding-top: 90px;">
+    
+    <!-- Hero Banner -->
+    <section class="py-5" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(59, 130, 246, 0.1) 100%);">
+      <div class="container py-4 text-center reveal active">
+        <h1 class="display-4 fw-extrabold mb-3" style="font-family: var(--font-heading); letter-spacing: -1px;">Drivetrain & Savings Analytics</h1>
+        <p class="lead text-muted mx-auto" style="max-width: 700px; font-family: var(--font-body); font-size: 1.05rem;">
+          Compare powertrain architectures, review charging speed levels, and calculate custom driving offsets using our real-time interactive tools.
+        </p>
+      </div>
+    </section>
+
+    <!-- 1. Types of EVs Section -->
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-5 reveal">
+          <span class="text-success fw-bold text-uppercase" style="font-size: 0.8rem; letter-spacing: 2px; color: var(--color-green) !important;">Drivetrain Models</span>
+          <h2 class="display-6 fw-extrabold mt-2 mb-3" style="font-family: var(--font-heading); letter-spacing: -0.5px;">Powertrain Classifications</h2>
+          <p class="text-muted">An analytical comparison of the four prominent electric vehicle systems.</p>
+        </div>
+
+        <div class="row g-4">
+          <!-- BEV -->
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card glass-card h-100 border-0 p-4">
+              <span class="badge w-fit mb-3 px-3 py-1.5" style="background-color: var(--color-green-glow); color: var(--color-green); font-size: 0.75rem; font-weight: 700; border-radius: 50px;">BEV</span>
+              <h4 class="fw-bold mb-2" style="font-family: var(--font-heading); font-size: 1.25rem;">Battery Electric</h4>
+              <p class="text-muted small mb-3">100% Electric drivetrain driven solely by battery grids charged from external plugs.</p>
+              <ul class="list-unstyled small d-flex flex-column gap-2 text-muted border-top pt-3 mt-auto mb-0">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Zero direct emissions</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Maximum running savings</li>
+                <li><i class="bi bi-info-circle-fill text-primary me-2"></i> Range: 150 - 450+ miles</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- PHEV -->
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card glass-card h-100 border-0 p-4">
+              <span class="badge w-fit mb-3 px-3 py-1.5" style="background-color: var(--color-blue-glow); color: var(--color-blue); font-size: 0.75rem; font-weight: 700; border-radius: 50px;">PHEV</span>
+              <h4 class="fw-bold mb-2" style="font-family: var(--font-heading); font-size: 1.25rem;">Plug-in Hybrid</h4>
+              <p class="text-muted small mb-3">Integrates an electric motor battery with a gasoline engine backup. Plugs in to charge.</p>
+              <ul class="list-unstyled small d-flex flex-column gap-2 text-muted border-top pt-3 mt-auto mb-0">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Gas engine long backup</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> 25-55 mi electric range</li>
+                <li><i class="bi bi-info-circle-fill text-primary me-2"></i> Flexible hybrid power</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- HEV -->
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card glass-card h-100 border-0 p-4">
+              <span class="badge w-fit mb-3 px-3 py-1.5" style="background-color: var(--color-cyan-glow); color: var(--color-cyan); font-size: 0.75rem; font-weight: 700; border-radius: 50px;">HEV</span>
+              <h4 class="fw-bold mb-2" style="font-family: var(--font-heading); font-size: 1.25rem;">Hybrid Electric</h4>
+              <p class="text-muted small mb-3">Uses gas engine alongside motor help. Recharges battery solely via braking friction.</p>
+              <ul class="list-unstyled small d-flex flex-column gap-2 text-muted border-top pt-3 mt-auto mb-0">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> No charging plug needed</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Higher MPG than pure gas</li>
+                <li><i class="bi bi-info-circle-fill text-primary me-2"></i> Short electric capabilities</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- FCEV -->
+          <div class="col-md-6 col-lg-3 reveal">
+            <div class="card glass-card h-100 border-0 p-4">
+              <span class="badge w-fit mb-3 px-3 py-1.5" style="background-color: rgba(13, 110, 253, 0.1); color: #0d6efd; font-size: 0.75rem; font-weight: 700; border-radius: 50px;">FCEV</span>
+              <h4 class="fw-bold mb-2" style="font-family: var(--font-heading); font-size: 1.25rem;">Fuel Cell Electric</h4>
+              <p class="text-muted small mb-3">Feeds hydrogen gas into a fuel cell stack to generate electricity for motor drives.</p>
+              <ul class="list-unstyled small d-flex flex-column gap-2 text-muted border-top pt-3 mt-auto mb-0">
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Refuels under 5 minutes</li>
+                <li><i class="bi bi-check-circle-fill text-success me-2"></i> Emits only clean water</li>
+                <li><i class="bi bi-info-circle-fill text-primary me-2"></i> Sparse refueling stations</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. Interactive Savings Slider Calculator Section -->
+    <section class="py-5" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); transition: var(--transition-smooth);">
+      <div class="container py-3">
+        <div class="row align-items-center g-5">
+          <!-- Slider Inputs Column -->
+          <div class="col-lg-6 reveal">
+            <span class="text-success fw-bold text-uppercase" style="font-size: 0.8rem; letter-spacing: 2px; color: var(--color-green) !important;">Live Calculator</span>
+            <h2 class="display-6 fw-extrabold mt-2 mb-4" style="font-family: var(--font-heading); letter-spacing: -0.5px;">Simulate Your Fuel Savings</h2>
+            <p class="text-muted mb-4">Drag the sliding controllers below to adjust values. The yearly financial savings and ecological carbon offsets will update instantly.</p>
+            
+            <div class="d-flex flex-column gap-4">
+              <!-- Slider 1 -->
+              <div>
+                <div class="d-flex justify-content-between mb-1">
+                  <label class="small fw-bold">Weekly Driving Distance</label>
+                  <span class="small fw-extrabold text-success" id="val-distance">250 miles</span>
+                </div>
+                <input type="range" id="slider-distance" class="form-range" min="50" max="1000" step="25" value="250" oninput="calculateSavings()">
+              </div>
+
+              <!-- Slider 2 -->
+              <div>
+                <div class="d-flex justify-content-between mb-1">
+                  <label class="small fw-bold">Regional Gas Price ($ / Gallon)</label>
+                  <span class="small fw-extrabold text-success" id="val-gas-price">$3.50</span>
+                </div>
+                <input type="range" id="slider-gas-price" class="form-range" min="2.00" max="6.00" step="0.10" value="3.50" oninput="calculateSavings()">
+              </div>
+
+              <!-- Slider 3 -->
+              <div>
+                <div class="d-flex justify-content-between mb-1">
+                  <label class="small fw-bold">Gas Car Economy (MPG)</label>
+                  <span class="small fw-extrabold text-success" id="val-mpg">25 MPG</span>
+                </div>
+                <input type="range" id="slider-mpg" class="form-range" min="10" max="50" step="1" value="25" oninput="calculateSavings()">
+              </div>
+
+              <!-- Slider 4 -->
+              <div>
+                <div class="d-flex justify-content-between mb-1">
+                  <label class="small fw-bold">Electricity Utility Rate ($ / kWh)</label>
+                  <span class="small fw-extrabold text-success" id="val-electricity">$0.16</span>
+                </div>
+                <input type="range" id="slider-electricity" class="form-range" min="0.05" max="0.45" step="0.01" value="0.16" oninput="calculateSavings()">
+              </div>
+            </div>
+          </div>
+
+          <!-- Live Results Column -->
+          <div class="col-lg-6 reveal">
+            <div class="card glass-card border-0 p-5 text-center position-relative overflow-hidden" style="background: linear-gradient(135deg, var(--color-green-glow) 0%, var(--color-blue-glow) 100%); border-radius: 2rem;">
+              <span class="badge bg-success w-fit mx-auto mb-3 px-3 py-2 text-uppercase fw-bold" style="border-radius: 50px; font-size: 0.75rem;">Interactive Projection</span>
+              <h3 class="fw-extrabold mb-4" style="font-family: var(--font-heading); letter-spacing: -0.5px;">Annual Mobility Savings</h3>
+              
+              <div class="row g-4 my-2">
+                <div class="col-6">
+                  <div class="p-3 bg-white bg-opacity-20 rounded-4">
+                    <span class="text-muted d-block small mb-1">Cash Retained</span>
+                    <h2 class="display-6 fw-extrabold mb-0 text-success" id="calc-result-cash" style="color: var(--color-green) !important;">$1,480</h2>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="p-3 bg-white bg-opacity-20 rounded-4">
+                    <span class="text-muted d-block small mb-1">CO2 Diverted</span>
+                    <h2 class="display-6 fw-extrabold mb-0 text-primary" id="calc-result-co2" style="color: var(--color-blue) !important;">5.3 Tons</h2>
+                  </div>
+                </div>
+              </div>
+
+              <div class="border-top pt-4 mt-4 text-start text-muted small" style="line-height: 1.8;">
+                <p class="mb-1"><i class="bi bi-info-circle-fill text-success me-2"></i> Gas Cost: <strong id="calc-gas-cost-text">$1,820 / year</strong></p>
+                <p class="mb-1"><i class="bi bi-lightning-charge-fill text-info me-2"></i> Charging Cost: <strong id="calc-ev-cost-text">$340 / year</strong></p>
+                <p class="mb-0"><i class="bi bi-tree-fill text-success me-2"></i> Equivalent to planting <strong class="text-success" id="calc-trees-text">265 trees</strong>.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. How EVs Work Section -->
+    <section class="py-5">
+      <div class="container py-4">
+        <div class="text-center mb-5 reveal">
+          <span class="text-success fw-bold text-uppercase" style="font-size: 0.8rem; letter-spacing: 2px; color: var(--color-green) !important;">Engine Flow</span>
+          <h2 class="display-6 fw-extrabold mt-2 mb-3" style="font-family: var(--font-heading); letter-spacing: -0.5px;">How Drivetrains Work</h2>
+          <p class="text-muted mx-auto" style="max-width: 600px;">Electric motors eliminate complex transmissions and spark chambers, running on three modular concepts.</p>
+        </div>
+
+        <div class="row align-items-center g-5">
+          <!-- Flow Graphic -->
+          <div class="col-lg-5 text-center reveal">
+            <div class="p-4 glass-card border-0 position-relative inline-block" style="border-radius: 2rem;">
+              <svg width="280" height="280" viewBox="0 0 100 100" class="mx-auto">
+                <circle cx="50" cy="50" r="45" fill="none" stroke="var(--border-color)" stroke-width="2" stroke-dasharray="4,4"></circle>
+                <rect x="33" y="10" width="34" height="16" rx="4" fill="var(--color-blue-glow)" stroke="var(--color-blue)" stroke-width="1.5"></rect>
+                <text x="50" y="20" font-size="5" text-anchor="middle" font-weight="bold" fill="var(--text-primary)" style="font-family: var(--font-body);">BATTERY</text>
+                
+                <rect x="33" y="42" width="34" height="16" rx="4" fill="var(--color-cyan-glow)" stroke="var(--color-cyan)" stroke-width="1.5"></rect>
+                <text x="50" y="52" font-size="5" text-anchor="middle" font-weight="bold" fill="var(--text-primary)" style="font-family: var(--font-body);">INVERTER</text>
+                
+                <rect x="33" y="75" width="34" height="16" rx="4" fill="var(--color-green-glow)" stroke="var(--color-green)" stroke-width="1.5"></rect>
+                <text x="50" y="85" font-size="5" text-anchor="middle" font-weight="bold" fill="var(--text-primary)" style="font-family: var(--font-body);">MOTOR</text>
+                
+                <line x1="50" y1="26" x2="50" y2="42" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="1,1"></line>
+                <line x1="50" y1="58" x2="50" y2="75" stroke="var(--text-muted)" stroke-width="1.5" stroke-dasharray="1,1"></line>
+              </svg>
+              <div class="mt-4"><i class="bi bi-chevron-down text-success fs-3 floating"></i></div>
+            </div>
+          </div>
+
+          <!-- Description Steps -->
+          <div class="col-lg-7 reveal">
+            <div class="timeline-item mb-4">
+              <h4 class="fw-bold mb-1" style="font-family: var(--font-heading);">1. The Grid Battery</h4>
+              <p class="text-muted mb-0 small">Stores power as Direct Current (DC). Integrated flat beneath the passenger cabin floor, this design creates a low center of gravity to optimize rollover safety and cornering.</p>
+            </div>
+            <div class="timeline-item mb-4">
+              <h4 class="fw-bold mb-1" style="font-family: var(--font-heading);">2. Inverter Conversion</h4>
+              <p class="text-muted mb-0 small">Converts direct current (DC) into alternating current (AC) for motors. Controls speed and torque by managing frequency ranges.</p>
+            </div>
+            <div class="timeline-item mb-4">
+              <h4 class="fw-bold mb-1" style="font-family: var(--font-heading);">3. Electric Drive Motor</h4>
+              <p class="text-muted mb-0 small">Converts magnetic fields into mechanical rotation directly at the wheels. Delivers instantaneous torque from a complete stop with 90%+ energy efficiency rates.</p>
+            </div>
+            <div class="timeline-item">
+              <h4 class="fw-bold mb-1" style="font-family: var(--font-heading);">4. Regenerative Recovery</h4>
+              <p class="text-muted mb-0 small">Slashes brake wear. Reversing the magnetic poles turns the motor into a generator when slowing down, recovering kinetic energy back into battery storage.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Charging Speed Matrix Section -->
+    <section class="py-5" style="background-color: var(--bg-secondary); border-top: 1px solid var(--border-color); transition: var(--transition-smooth);">
+      <div class="container py-4">
+        <div class="text-center mb-5 reveal">
+          <span class="text-success fw-bold text-uppercase" style="font-size: 0.8rem; letter-spacing: 2px; color: var(--color-green) !important;">Charging Stations</span>
+          <h2 class="display-6 fw-extrabold mt-2 mb-3" style="font-family: var(--font-heading); letter-spacing: -0.5px;">Charging Speeds Comparison</h2>
+          <p class="text-muted">A clear breakdown of the three primary charging levels available to electric drivers.</p>
+        </div>
+
+        <div class="row g-4 text-center text-md-start">
+          <div class="col-md-4 reveal">
+            <div class="card glass-card h-100 border-0 p-4">
+              <h4 class="fw-bold mb-2 text-primary" style="font-family: var(--font-heading); font-size: 1.25rem;">Level 1 Charging</h4>
+              <h5 class="text-success fw-semibold mb-3" style="font-size: 0.95rem;">120V AC Outlet</h5>
+              <p class="text-muted small">Standard household power plug. Slow speeds, suited for plug-in hybrids or low daily commuters.</p>
+              <div class="mt-auto border-top pt-3 small text-muted">
+                <p class="mb-1"><i class="bi bi-clock me-2"></i> Speed: <strong>3-5 miles range / hour</strong></p>
+                <p class="mb-0"><i class="bi bi-house-fill me-2"></i> Ideal for: <strong>Home Overnight</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 reveal">
+            <div class="card glass-card h-100 border-0 p-4">
+              <h4 class="fw-bold mb-2 text-success" style="font-family: var(--font-heading); font-size: 1.25rem;">Level 2 Charging</h4>
+              <h5 class="text-success fw-semibold mb-3" style="font-size: 0.95rem;">240V AC Charger</h5>
+              <p class="text-muted small">High-capacity wall units installed in residential garages, retail parking structures, or offices.</p>
+              <div class="mt-auto border-top pt-3 small text-muted">
+                <p class="mb-1"><i class="bi bi-clock me-2"></i> Speed: <strong>20-30 miles range / hour</strong></p>
+                <p class="mb-0"><i class="bi bi-building me-2"></i> Ideal for: <strong>Home / Work chargers</strong></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4 reveal">
+            <div class="card glass-card h-100 border-0 p-4">
+              <h4 class="fw-bold mb-2 text-warning" style="font-family: var(--font-heading); font-size: 1.25rem;">DC Fast Charging</h4>
+              <h5 class="text-success fw-semibold mb-3" style="font-size: 0.95rem;">480V+ Direct Current</h5>
+              <p class="text-muted small">High-voltage chargers directly refilling batteries. Primarily located along highway routes for travel.</p>
+              <div class="mt-auto border-top pt-3 small text-muted">
+                <p class="mb-1"><i class="bi bi-clock me-2"></i> Speed: <strong>100-250+ miles in 20 min</strong></p>
+                <p class="mb-0"><i class="bi bi-geo-alt-fill me-2"></i> Ideal for: <strong>Road Trips</strong></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer id="main-footer"></footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    // Live range calculator math
+    function calculateSavings() {
+      const distance = parseFloat(document.getElementById('slider-distance').value) || 0;
+      const gasPrice = parseFloat(document.getElementById('slider-gas-price').value) || 0;
+      const mpg = parseFloat(document.getElementById('slider-mpg').value) || 0;
+      const electricity = parseFloat(document.getElementById('slider-electricity').value) || 0;
+
+      // Update Slider Label values live
+      document.getElementById('val-distance').innerText = `${distance} miles`;
+      document.getElementById('val-gas-price').innerText = `$${gasPrice.toFixed(2)}`;
+      document.getElementById('val-mpg').innerText = `${mpg} MPG`;
+      document.getElementById('val-electricity').innerText = `$${electricity.toFixed(2)}`;
+
+      const annualDistance = distance * 52;
+      const annualGasCost = (annualDistance / mpg) * gasPrice;
+
+      const evEfficiency = 0.3; // kWh per mile
+      const annualEvCost = annualDistance * evEfficiency * electricity;
+
+      const annualSavings = annualGasCost - annualEvCost;
+      const annualCo2Saved = annualDistance * 0.000411; // Metric tons per mile
+      const equivalentTrees = Math.round(annualCo2Saved / 0.02);
+
+      // Render calculations
+      document.getElementById('calc-result-cash').innerText = `$${Math.round(annualSavings).toLocaleString()}`;
+      document.getElementById('calc-result-co2').innerText = `${annualCo2Saved.toFixed(1)} Tons`;
+      document.getElementById('calc-gas-cost-text').innerText = `$${Math.round(annualGasCost).toLocaleString()} / year`;
+      document.getElementById('calc-ev-cost-text').innerText = `$${Math.round(annualEvCost).toLocaleString()} / year`;
+      document.getElementById('calc-trees-text').innerText = `${equivalentTrees.toLocaleString()} mature trees`;
+    }
+
+    window.addEventListener('load', calculateSavings);
+  </script>
+</body>
+</html>
